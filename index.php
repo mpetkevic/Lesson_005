@@ -5,6 +5,7 @@ class Car
 {
     function go()
     {
+        echo "Let's drive";
         echo "Vehicle rides";
     }
 }
@@ -15,6 +16,7 @@ class SportCar extends Car
     {
         parent::go();
         echo "Speed 20km/h";
+
     }
 }
 
