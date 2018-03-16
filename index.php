@@ -69,19 +69,19 @@ class SportCar extends Car
     function transmissionAuto()
     {
         echo "Car has automatic transmission. <br>";
-        $moveFormward = "Car moves forward<br>";
+//        $moveFormward = "Car moves forward<br>";
         $this->mBack();
     }
 
     function transmissionManual()
     {
         echo "Car has manual transmission. <br>";
-        $moveFormward = "Car moves forward<br>";
+//        $moveFormward = "Car moves forward<br>";
         $maxSpeedForFirstGear = 20;
         if ($this->speed > $maxSpeedForFirstGear) {
-            echo "Car drives with first gear<br>";
-        } else {
             echo "Car drives with second gear<br>";
+        } else {
+            echo "Car drives with first gear<br>";
         }
         $this->mBack();
     }
@@ -99,3 +99,5 @@ trait moveBackward
 
 $bmw = new SportCar(20, 2000, 'automatic');
 $bmw->move();
+$audi = new SportCar(20, 1500, 'manual');
+$audi->move();
